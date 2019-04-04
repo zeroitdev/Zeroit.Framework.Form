@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3933DC3C-892F-418F-86B3-AA9B8913F0BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeroit.Framework.Form</RootNamespace>
+    <AssemblyName>Zeroit.Framework.Form</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Zeroit.Framework.Form.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\Zeroit.Framework.Form.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ZeroitStrongKeys.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddShadow\AddShadow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AddShadow\AddShadow.Designer.cs">
+      <DependentUpon>AddShadow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomForm.cs" />
+    <Compile Include="CustomForm.Designer.cs">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DragFormPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DragFormPanel.Designer.cs">
+      <DependentUpon>DragFormPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropShadow\DropShadow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EllipticalForm\EllipticalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EllipticalForm\Helpers\Elipse.cs" />
+    <Compile Include="OSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResizableForm\CustomShadow.cs" />
+    <Compile Include="ResizableForm\ControlButtons.cs" />
+    <Compile Include="ResizableForm\NativeShadow.cs" />
+    <Compile Include="ResizableForm\ResizableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResizableForm\ResizableForm.Designer.cs">
+      <DependentUpon>ResizableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeManager.cs" />
+    <Compile Include="Thematic\Forms\Thematic.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Thematic\Themes\Theme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Thematic\Utilities\Enumeration.cs" />
+    <Compile Include="Thematic\Utilities\Utilities.cs" />
+    <Compile Include="ZeroitDeepBlueSea\ZeroitDeepBlueSea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitForm\ZeroitForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitThemeContainer\ZeroitThemeContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitMessageBox\ZeroitMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZeroitFormGradient\ZeroitFormGradient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZeroitFormChrome\ZeroitFormChrome.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HELPERS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_FormUIEditors\FormEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_FormUIEditors\FormEditorDialog.Designer.cs">
+      <DependentUpon>FormEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetroForm\ColorSchema.cs" />
+    <Compile Include="MetroForm\MetroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetroForm\MetroFormGlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetroForm\WinAPI.cs" />
+    <Compile Include="ModernForm\Controls\AppBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Controls\ModernButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Controls\ModernShadowPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Controls\ModernTileReborn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Controls\SidebarControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Forms\GlowShadowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Forms\GlowShadowFormAaaaaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Forms\ModernForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Forms\PerPixelAlphaForm.cs" />
+    <Compile Include="ModernForm\Forms\ShadowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Native\DwmNative.cs" />
+    <Compile Include="ModernForm\Objects\Action.cs" />
+    <Compile Include="ModernForm\Objects\Colors\ColorScheme.cs" />
+    <Compile Include="ModernForm\Objects\Colors\DefaultColors.cs" />
+    <Compile Include="ModernForm\Objects\Colors\DefaultColorSchemes.cs" />
+    <Compile Include="ModernForm\Objects\Interaction\ModernTitlebarButton.cs" />
+    <Compile Include="ModernForm\Objects\Interaction\NativeTitlebarButton.cs" />
+    <Compile Include="ModernForm\Objects\Interaction\WindowHitTestResult.cs" />
+    <Compile Include="ModernForm\Objects\MenuItems\AppBarMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModernForm\Objects\MenuItems\AppBarMenuItem.cs" />
+    <Compile Include="ModernForm\Objects\MenuItems\AppBarMenuTextItem.cs" />
+    <Compile Include="ModernForm\Objects\MenuItems\MeasureMenuItemEventArgs.cs" />
+    <Compile Include="ModernForm\Objects\MenuItems\RenderMenuItemEventArgs.cs" />
+    <Compile Include="ModernForm\Objects\ShadowType.cs" />
+    <Compile Include="ModernForm\Objects\TileText.cs" />
+    <Compile Include="ModernForm\SidebarTextItem.cs" />
+    <Compile Include="ModernForm\Utils\Animation.cs" />
+    <Compile Include="ModernForm\Utils\ColorSchemeConverter.cs" />
+    <Compile Include="ModernForm\Utils\ControlPaintWrapper.cs" />
+    <Compile Include="ModernForm\Utils\FormUtils.cs" />
+    <Compile Include="ModernForm\Utils\GaussianBlur.cs" />
+    <Compile Include="ModernForm\Utils\GraphicUtils.cs" />
+    <Compile Include="ModernForm\Utils\ShadowUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddShadow\AddShadow.resx">
+      <DependentUpon>AddShadow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomForm.resx">
+      <DependentUpon>CustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_FormUIEditors\FormEditorDialog.resx">
+      <DependentUpon>FormEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResizableForm\ResizableForm.resx">
+      <DependentUpon>ResizableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\controlbutton_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\controlbutton_maxres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\controlbutton_min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\controlbutton_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\titlebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\titlebarunfocused.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\titlebarunfocused1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cmdClose_BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cmdMaxRes_BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cmdMin_BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\title_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Folder_16px.png" />
+    <None Include="Zeroit.Framework.Form.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZeroitStrongKeys.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="__NewlyAdded\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
